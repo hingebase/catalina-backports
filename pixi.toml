@@ -1,0 +1,25 @@
+# This should match the minimum supported Pixi version
+#:schema https://pixi.prefix.dev/v0.71.0/schema/manifest/schema.json
+
+[workspace]
+name = "catalina-backports"
+channels = ["https://prefix.dev/github-releases"]
+requires-pixi = ">=0.71.0"
+
+[[workspace.platforms]]
+platform = "osx-64"
+macos = "10.15"
+
+[dependencies]
+# Same exact version as CI
+rattler-build = "==0.74.0"
+
+[tasks.build]
+cmd = [
+    "rattler-build",
+    "build",
+    "--no-include-recipe",
+    "--package-format", "conda:22",
+    "--variant-config", "variants/local.yaml",
+    "--recipe-dir",
+]

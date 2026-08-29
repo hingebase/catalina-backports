@@ -1,0 +1,32 @@
+context:
+  version: 4.0.2
+  sha256: 736b467530f916737b7031310ccb21d8218c6229e61e8e160cd1d3458cd543a8
+
+package:
+  name: openssl
+  version: ${{ version }}
+
+source:
+  url: https://github.com/openssl/openssl/releases/download/openssl-${{ version }}/openssl-${{ version }}.tar.gz
+  sha256: ${{ sha256 }}
+
+build:
+  number: 0
+  skip:
+    - not osx
+    - not x86_64
+    - build_platform != target_platform
+
+requirements:
+  build:
+    - ${{ compiler("c") }}
+    - perl >=5.10.0
+    - ${{ stdlib("c") }}
+
+about:
+  documentation: https://docs.openssl.org/master/
+  homepage: https://openssl-library.org/
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  repository: https://github.com/openssl/openssl
+  summary: OpenSSL is an open-source implementation of the SSL and TLS protocols

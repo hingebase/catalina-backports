@@ -1,0 +1,32 @@
+context:
+  version: 1.3.2
+  sha256: d7a0654783a4da529d1bb793b7ad9c3318020af77667bcae35f95d0e42a792f3
+
+package:
+  name: libzlib
+  version: ${{ version }}
+
+source:
+  url: https://github.com/madler/zlib/releases/download/v${{ version }}/zlib-${{ version }}.tar.xz
+  sha256: ${{ sha256 }}
+
+build:
+  number: 0
+  skip:
+    - not osx
+    - not x86_64
+    - build_platform != target_platform
+
+requirements:
+  build:
+    - cmake >=3.12.0
+    - ${{ compiler("c") }}
+    - ${{ stdlib("c") }}
+
+about:
+  documentation: http://zlib.net/manual.html
+  homepage: http://zlib.net/
+  license: Zlib
+  license_file: LICENSE
+  repository: https://github.com/madler/zlib
+  summary: Massively spiffy yet delicately unobtrusive compression library

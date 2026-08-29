@@ -1,0 +1,34 @@
+context:
+  version: 5.8.3
+  sha256: fff1ffcf2b0da84d308a14de513a1aa23d4e9aa3464d17e64b9714bfdd0bbfb6
+
+package:
+  name: liblzma
+  version: ${{ version }}
+
+source:
+  url: https://github.com/tukaani-project/xz/releases/download/v${{ version }}/xz-${{ version }}.tar.xz
+  sha256: ${{ sha256 }}
+
+build:
+  number: 0
+  skip:
+    - not osx
+    - not x86_64
+    - build_platform != target_platform
+
+requirements:
+  build:
+    - cmake >=3.20.0
+    - ${{ compiler("c") }}
+    - ${{ stdlib("c") }}
+
+about:
+  documentation: https://tukaani.org/xz/liblzma-api/files.html
+  homepage: http://tukaani.org/xz/
+  license: 0BSD
+  license_file:
+    - COPYING
+    - COPYING.0BSD
+  repository: http://git.tukaani.org/
+  summary: a compression library with an API similar to that of zlib

@@ -1,0 +1,26 @@
+name: liblzma
+
+on:
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  build:
+    name: Build package
+    permissions:
+      id-token: write
+    runs-on: macos-15-intel
+    steps:
+      - uses: actions/checkout@v7
+      - uses: prefix-dev/rattler-build-action@v0
+        with:
+          rattler-build-version: v0.74.0
+          recipe-path: liblzma/recipe.yaml
+          upload-artifact: "false"
+          # The recipe can be tracked via trusted publishing
+          build-args: >-
+            --no-include-recipe
+            --package-format 'conda:22'
+            --variant-config variants/ci.yaml
+      - run: rattler-build upload prefix -c hingebase/catalina-backports output/osx-64/liblzma-*.conda

@@ -1,0 +1,11 @@
+c_compiler:
+  - clang
+
+c_compiler_version:
+  - "22.1"
+
+c_stdlib:
+  - macosx_deployment_target
+
+c_stdlib_version:
+  - "10.15"
