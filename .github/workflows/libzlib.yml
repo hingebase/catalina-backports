@@ -1,6 +1,9 @@
 name: libzlib
 
 on:
+  push:
+    branches:
+      - build-all
   workflow_dispatch:
 
 permissions: read-all
