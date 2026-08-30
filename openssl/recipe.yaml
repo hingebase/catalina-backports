@@ -11,7 +11,7 @@ source:
   sha256: ${{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip:
     - not osx
     - not x86_64
@@ -22,6 +22,10 @@ requirements:
     - ${{ compiler("c") }}
     - perl >=5.10.0
     - ${{ stdlib("c") }}
+  run:
+    - ca-certificates
+  run_exports:
+    - ${{ pin_subpackage("openssl") }}
 
 about:
   documentation: https://docs.openssl.org/master/
