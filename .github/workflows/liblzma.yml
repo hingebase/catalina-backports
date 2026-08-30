@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: prefix-dev/rattler-build-action@v0
         with:
-          rattler-build-version: v0.74.0
+          rattler-build-version: v0.75.0
           recipe-path: liblzma/recipe.yaml
           upload-artifact: "false"
           # The recipe can be tracked via trusted publishing

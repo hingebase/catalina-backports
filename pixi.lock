@@ -1,0 +1,23 @@
+version: 7
+platforms:
+- name: osx-64-macos-10-15
+  subdir: osx-64
+  virtual-packages:
+  - __osx=10.15
+  - __unix=0=0
+  - __archspec=0=x86_64
+environments:
+  default:
+    channels:
+    - url: https://prefix.dev/github-releases/
+    packages:
+      osx-64-macos-10-15:
+      - conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.75.0-h0dc7051_0.conda
+packages:
+- conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.75.0-h0dc7051_0.conda
+  sha256: c34829ed7ccc9a2a940b0cbd008b846e9611c2561e509d968ab22891876f5018
+  md5: ed3c884dad836cf3729c02a98a62e733
+  license: BSD-3-Clause
+  run_exports: {}
+  size: 11882948
+  timestamp: 1788037050702
