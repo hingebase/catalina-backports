@@ -25,4 +25,8 @@ jobs:
             --no-include-recipe
             --package-format 'conda:22'
             --variant-config variants/ci.yaml
-      - run: rattler-build upload prefix -c hingebase/catalina-backports output/osx-64/libzlib-*.conda
+      - run: >-
+          rattler-build upload prefix
+          -c hingebase/catalina-backports
+          --generate-attestation
+          output/osx-64/libzlib-*.conda
