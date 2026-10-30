@@ -12,12 +12,13 @@ environments:
     - url: https://prefix.dev/github-releases/
     packages:
       osx-64-macos-10-15:
-      - conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.75.0-h0dc7051_0.conda
+      - conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.79.0-h0dc7051_0.conda
 packages:
-- conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.75.0-h0dc7051_0.conda
-  sha256: c34829ed7ccc9a2a940b0cbd008b846e9611c2561e509d968ab22891876f5018
-  md5: ed3c884dad836cf3729c02a98a62e733
+- conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.79.0-h0dc7051_0.conda
+  sha256: e9ddde4d9d3fc322ce1cbecbefd94a48c09813ccf23f85d64e1cd27e09a0d01f
+  md5: 7cb2eb0c16ef90248e28aeb2208dd26c
+  attestations_sha256: 8c7739dea4acbcf1c13661361de72e2c0a369896484f72f9427e10a3b491cea4
   license: BSD-3-Clause
   run_exports: {}
-  size: 11882948
-  timestamp: 1788037050702
+  size: 11898167
+  timestamp: 1793277241231
