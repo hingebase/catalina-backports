@@ -4,7 +4,7 @@ platforms:
   subdir: osx-64
   virtual-packages:
   - __osx=10.15
-  - __unix=0=0
+  - __unix=0
   - __archspec=0=x86_64
 environments:
   default:
@@ -12,13 +12,13 @@ environments:
     - url: https://prefix.dev/github-releases/
     packages:
       osx-64-macos-10-15:
-      - conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.79.0-h0dc7051_0.conda
+      - conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.80.0-h0dc7051_0.conda
 packages:
-- conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.79.0-h0dc7051_0.conda
-  sha256: e9ddde4d9d3fc322ce1cbecbefd94a48c09813ccf23f85d64e1cd27e09a0d01f
-  md5: 7cb2eb0c16ef90248e28aeb2208dd26c
-  attestations_sha256: 8c7739dea4acbcf1c13661361de72e2c0a369896484f72f9427e10a3b491cea4
+- conda: https://prefix.dev/github-releases/osx-64/rattler-build-0.80.0-h0dc7051_0.conda
+  sha256: 3d2c6a3c68a0528da54127058853611d865f9c6a054d26f4677fb2cc095bf742
+  md5: cfe45651c3b582b332a40da6b6060773
+  attestations_sha256: 9f0a4a6a67825dda1b408f765ad11fb6d4e93a22601a2825731931861802b9e6
   license: BSD-3-Clause
   run_exports: {}
-  size: 11898167
-  timestamp: 1793277241231
+  size: 12134132
+  timestamp: 1793434653611
