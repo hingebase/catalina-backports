@@ -12,7 +12,7 @@ macos = "10.15"
 
 [dependencies]
 # Same exact version as CI
-rattler-build = "==0.80.0"
+rattler-build = "==0.81.0"
 
 [tasks.build]
 cmd = [
